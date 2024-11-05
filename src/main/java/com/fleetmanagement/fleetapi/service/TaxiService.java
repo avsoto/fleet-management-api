@@ -15,8 +15,8 @@ public class TaxiService{
 
     public List<Taxi> findByPlateContainingIgnoreCase(String plate) {
         if (plate == null || plate.isEmpty()) {
-            // Si no se proporciona una placa, devolver todos los taxis
-            return taxiRepository.findAll(); // o puedes manejarlo de otra forma
+            // If a license plate is not provided, return all taxis
+            return taxiRepository.findAll();
         }
         return taxiRepository.findByPlateContainingIgnoreCase(plate);
     }
